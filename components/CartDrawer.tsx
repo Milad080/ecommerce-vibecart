@@ -27,14 +27,14 @@ const CartDrawer = () => {
       name: "High-End Fragrance Collection for Males",
       price: 1615,
       quantity: 4,
-      image: "https://placehold.co/70*70",
+      image: "https://placehold.co/70x70",
     },
     {
       id: "2",
       name: "High-End Fragrance Collection for Males",
       price: 2115,
       quantity: 4,
-      image: "https://placehold.co/70*70",
+      image: "https://placehold.co/70x70",
     },
   ]);
   const [cartMenuOpen, setCartMenuOpen] = useAtom(cartMenuMenuState, {

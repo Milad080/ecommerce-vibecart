@@ -16,28 +16,28 @@ const SearchModal = ({ open, setOpen }: { open: boolean; setOpen: any }) => {
       price: 849,
       originalPrice: 1099,
       discount: 23,
-      image: "https://placehold.co/100*200",
+      image: "https://placehold.co/100x200",
     },
     {
       name: "Intense men perfume",
       price: 849,
       originalPrice: 1099,
       discount: 23,
-      image: "https://placehold.co/100*200",
+      image: "https://placehold.co/100x200",
     },
     {
       name: "Intense men perfume",
       price: 849,
       originalPrice: 1099,
       discount: 23,
-      image: "https://placehold.co/100*200",
+      image: "https://placehold.co/100x200",
     },
     {
       name: "Intense men perfume",
       price: 849,
       originalPrice: 1099,
       discount: 23,
-      image: "https://placehold.co/100*200",
+      image: "https://placehold.co/100x200",
     },
   ];
   return (
