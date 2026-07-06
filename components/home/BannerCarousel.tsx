@@ -3,7 +3,6 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "../ui/button";
-import Image from "next/image";
 
 const desktopImages = [
   "/images/slider/desktop-slider-1.png",
@@ -13,14 +12,10 @@ const desktopImages = [
 ];
 
 const mobileImages = [
-  // "https://placehold.co/600x800?text=Mobile+1",
-  // "https://placehold.co/600x800?text=Mobile+2",
-  // "https://placehold.co/600x800?text=Mobile+3",
-  // "https://placehold.co/600x800?text=Mobile+4",
-  "/images/slider/desktop-slider-1.png",
-  "/images/slider/desktop-slider-2.png",
-  "/images/slider/desktop-slider-3.png",
-  "/images/slider/desktop-slider-4.png",
+  "/images/slider/mobile-slider-1.png",
+  "/images/slider/mobile-slider-2.png",
+  "/images/slider/mobile-slider-3.png",
+  "/images/slider/mobile-slider-4.png",
 ];
 
 const BannerCarousel = () => {
@@ -50,11 +45,9 @@ const BannerCarousel = () => {
             index === currentIndex ? "opacity-100" : "opacity-0"
           }`}
         >
-          <Image
+          <img
             src={src}
             alt={`Slide ${index + 1}`}
-            width={1200}
-            height={400}
             className="w-full h-full object-fill"
           />
         </div>
@@ -104,7 +97,7 @@ const BannerCarousel = () => {
 
       {/* Mobile Banner */}
       <div className="block md:hidden">
-        {renderCarousel(mobileImages, "h-[220px]")}
+        {renderCarousel(mobileImages, "h-[420px]")}
       </div>
     </div>
   );

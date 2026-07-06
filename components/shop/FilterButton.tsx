@@ -193,9 +193,9 @@ const FilterButton = () => {
             }
           ></SheetTrigger>
           <SheetContent side="bottom" className="h-full overflow-y-auto">
-            <SheetTitle>
+            <SheetHeader>
               <SheetTitle>Filters</SheetTitle>
-            </SheetTitle>
+            </SheetHeader>
             <FilterContent />
           </SheetContent>
         </Sheet>
