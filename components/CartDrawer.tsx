@@ -27,14 +27,14 @@ const CartDrawer = () => {
       name: "High-End Fragrance Collection for Males",
       price: 1615,
       quantity: 4,
-      image: "https://placehold.co/70x70",
+      image: "images/products-main/perfume-1.jpg",
     },
     {
       id: "2",
       name: "High-End Fragrance Collection for Males",
       price: 2115,
       quantity: 4,
-      image: "https://placehold.co/70x70",
+      image: "images/products-main/perfume-3.jpg",
     },
   ]);
   const [cartMenuOpen, setCartMenuOpen] = useAtom(cartMenuMenuState, {
@@ -101,7 +101,7 @@ const CartDrawer = () => {
                   <p className="text-xs sm:text-sm text-gray-500 mt-1 ">
                     Buy More Save More
                   </p>
-                  <div className="flex items-center justify-center mt-2">
+                  <div className="flex items-center justify-between mt-2">
                     <div className="flex items-center">
                       <button
                         className="p-1"

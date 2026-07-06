@@ -19,47 +19,71 @@ import { hamburgerMenuState } from "./store";
 const Navbar = () => {
   const navItems = [
     { name: "CRAZY DEALS", icon: <RiDiscountPercentFill size={24} /> },
+
     { name: "SHOP ALL", icon: <LuStore size={24} /> },
+
     { name: "BESTSELLERS", icon: <GrLike size={24} /> },
+
     {
       name: "PERFUMES",
       icon: <GiPerfumeBottle size={24} />,
       hasSubmenu: true,
       submenu: [
-        { name: "Men's Perfume" },
-        { name: "Women's Perfume" },
-        { name: "Unisex Perfume" },
+        { name: "Men's Perfumes" },
+        { name: "Women's Perfumes" },
+        { name: "Unisex Perfumes" },
+        { name: "Arabic Perfumes" },
+        { name: "Luxury Collection" },
+        { name: "Travel Size" },
+        { name: "Gift Sets" },
         { name: "New Arrivals" },
       ],
     },
+
     {
       name: "BATH & BODY",
       icon: <FaBath size={24} />,
       hasSubmenu: true,
       submenu: [
+        { name: "Body Wash" },
         { name: "Shower Gel" },
         { name: "Body Lotion" },
+        { name: "Body Butter" },
         { name: "Hand Cream" },
         { name: "Body Scrub" },
+        { name: "Soap Bars" },
+        { name: "Bath Accessories" },
       ],
     },
+
     { name: "MAKEUP", icon: <PiHighlighterCircleBold size={24} /> },
+
     {
       name: "SKINCARE",
       icon: <MdFace4 size={24} />,
       hasSubmenu: true,
       submenu: [
         { name: "Cleansers" },
+        { name: "Toners" },
         { name: "Moisturizers" },
         { name: "Serums" },
+        { name: "Eye Care" },
+        { name: "Face Masks" },
         { name: "Sunscreen" },
+        { name: "Anti-Aging" },
       ],
     },
   ];
   const [open, setOpen] = useState(false);
+  const [openedSubmenu, setOpenedSubmenu] = useState<string | null>(null);
+
   const [hamMenuOpen, setHamMenuOpen] = useAtom(hamburgerMenuState, {
     store: useStore(),
   });
+  const handleSubmenu = (name: string) => {
+    setOpenedSubmenu((prev) => (prev === name ? null : name));
+  };
+
   const handleOnClickHamburgerMenu = () => {
     setHamMenuOpen(true);
     console.log(`clicked on hamMenu ${hamMenuOpen}`);
@@ -120,15 +144,41 @@ const Navbar = () => {
                 </div>
                 <div className="space-y-4"></div>
                 {navItems.map((item) => (
-                  <div
-                    key={item.name}
-                    className="flex items-center justify-between py-2 border-b border-gray-300"
-                  >
-                    <div className="flex items-center space-x-4 ">
-                      {item.icon}
-                      <span className="font-medium">{item.name}</span>
-                    </div>
-                    {item.hasSubmenu && <ChevronRight size={20} />}
+                  <div key={item.name} className="border-b border-gray-300">
+                    <button
+                      type="button"
+                      onClick={() =>
+                        item.hasSubmenu && handleSubmenu(item.name)
+                      }
+                      className="flex w-full items-center justify-between py-3"
+                    >
+                      <div className="flex items-center gap-4">
+                        {item.icon}
+                        <span className="font-medium">{item.name}</span>
+                      </div>
+
+                      {item.hasSubmenu && (
+                        <ChevronRight
+                          size={20}
+                          className={`transition-transform duration-300 ${
+                            openedSubmenu === item.name ? "rotate-90" : ""
+                          }`}
+                        />
+                      )}
+                    </button>
+
+                    {item.hasSubmenu && openedSubmenu === item.name && (
+                      <ul className="pb-3 pl-12 space-y-2">
+                        {item.submenu?.map((subItem) => (
+                          <li
+                            key={subItem.name}
+                            className="cursor-pointer text-sm text-gray-600 hover:text-black"
+                          >
+                            {subItem.name}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 ))}
               </SheetContent>

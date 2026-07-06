@@ -138,7 +138,7 @@
 }
 
 .heading {
-  @apply tracking-[0.6px] text-lg font-[400] sm:text-3xl;
+  @apply tracking-[0.6px] text-xl font-[400] sm:text-3xl;
 }
 
 .subHeading {
