@@ -10,7 +10,6 @@ import {
   MapPinIcon,
   TicketIcon,
 } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -39,7 +38,7 @@ const orderItems: OrderItems[] = [
     image: "images/products-main/perfume-1.jpg",
   },
   {
-    name: "High-End Fragrance Collection for Males",
+    name: "High-End Fragrance Collection for Females",
     size: "200ml",
     quantity: 1,
     price: 799.0,
@@ -259,11 +258,9 @@ const CheckoutPage = () => {
               <div className="space-y-4 mb-3">
                 {orderItems.map((item, index) => (
                   <div key={index} className="flex items-center space-x-4">
-                    <Image
+                    <img
                       src={item.image}
                       alt={item.name}
-                      width={80}
-                      height={80}
                       className="w-20 h-20 object-cover"
                     />
 

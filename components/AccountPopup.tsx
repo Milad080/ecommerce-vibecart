@@ -42,7 +42,7 @@ const AccountPopup = () => {
             className="lg:flex"
             onClick={() => handleOnClickAccMenu()}
           >
-            <User size="24" />
+            <User className="size-6 lg:size-7" />
           </Button>
         }
       ></DialogTrigger>

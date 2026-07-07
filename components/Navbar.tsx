@@ -103,7 +103,7 @@ const Navbar = () => {
                     size="icon"
                     className="lg:hidden mr-2"
                   >
-                    <Menu size={24} />
+                    <Menu className="size-6" />
                   </Button>
                 }
               ></SheetTrigger>

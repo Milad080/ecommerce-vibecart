@@ -32,7 +32,7 @@ const OrderPage = () => {
               {[
                 ["Order Number", "VC-451678"],
                 ["Date", "Nov 26, 2026"],
-                ["Email", "fatimah.zizi@test.com"],
+                ["Email", "fatimah@test.com"],
                 ["Total", "$404.00"],
                 ["Payment", "Cash on delivery (COD)"],
               ].map(([title, value]) => (
@@ -54,7 +54,7 @@ const OrderPage = () => {
               <div className="space-y-6">
                 {/* Confirmation */}
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-1 h-6 w-6 shrink-0 text-green-600" />
+                  <CheckCircle2 className="mt-1 h-12 w-12 shrink-0 text-green-600" />
 
                   <div>
                     <h2 className="text-2xl font-semibold">

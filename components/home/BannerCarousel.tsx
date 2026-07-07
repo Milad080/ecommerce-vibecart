@@ -91,12 +91,12 @@ const BannerCarousel = () => {
   return (
     <div className="mb-5">
       {/* Desktop Banner */}
-      <div className="hidden md:block">
+      <div className="hidden sm:block">
         {renderCarousel(desktopImages, "h-[400px]")}
       </div>
 
       {/* Mobile Banner */}
-      <div className="block md:hidden">
+      <div className="block sm:hidden">
         {renderCarousel(mobileImages, "h-[420px]")}
       </div>
     </div>

@@ -72,7 +72,7 @@ const CartDrawer = () => {
               className="relative"
               onClick={() => handleOnClickCartMenu()}
             >
-              <ShoppingBag size={24} />
+              <ShoppingBag className="size-6 lg:size-7" />
               <span className="absolute top-0 left-0 inline-flex items-center justify-center px-1 py-0.5 text-[11px] font-bold leading-none text-white bg-black rounded-full">
                 {cartItems.length}
               </span>

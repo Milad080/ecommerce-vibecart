@@ -1,5 +1,4 @@
 import { Rabbit, Droplet, Wallet, Users } from "lucide-react";
-import Image from "next/image";
 
 const NeedOfWebsite = () => {
   const features = [
@@ -35,11 +34,9 @@ const NeedOfWebsite = () => {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
         {features.map((feature, index) => (
           <div key={index} className="flex flex-col items-center text-center">
-            <Image
+            <img
               src={`/images/features/${feature.name}.png`}
               alt="_"
-              height={100}
-              width={100}
               className="sm:w-[50px] sm:h-[50px] mb-[20px]"
             />
             <h3 className="text-sm sm:text-lg mb-1 sm:mb-2 textGap text-gray-500">
